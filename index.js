@@ -20,3 +20,10 @@ function displayList(){
         console.log(listItem) // to check if it was added. Testing purposes
     }
 }
+// displayList()
+// addItem("sneakers")
+// addItem("gloves")
+// addItem("tater tots")
+// displayList()
+// removeLastItem()
+// displayList()
