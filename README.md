@@ -21,8 +21,10 @@ https://github.com/ANIO-Official/lab4.2-arrayManipulation
 ## My process
 To complete this lab, I started by adding the index.html, index.js, and README files. Then I followed these steps:
  1. **Starting in the JS file, I created an empty global array variable called 'shoppingList'**
+
     This will hold all the data for the shopping list.
  2. **Created functions for Adding, Removing, and displaying the shopping list. Tested functionality.**
+
     addItem function recieved the parameter item to represent the item being added.
     addItem also uses push to add the item to the array.
     removeLastItem function removes the last item in the array using pop.
@@ -32,6 +34,7 @@ To complete this lab, I started by adding the index.html, index.js, and README f
     Tested again to make sure fixes worked.
     Add, Commit once any part worked.
  3. **Modified the addItem function**
+
     I commented out the previous version of the function for documentation of a task completed.
     Updated the addItem function with conditional to only add an item if it was not already in the array.
     Created a new function called filterItems that took 'item' as a parameter to search for in the array.
@@ -41,6 +44,7 @@ To complete this lab, I started by adding the index.html, index.js, and README f
     Tested again to make sure fixes worked.
     Add, Commit once any part worked.
  4. **Update the HTML File & DOM Manipulation**
+
     Added base HTML format using ! shortcut in VSCode.
     Used semantic html to add header, new input field, an unordered list, and buttons.
     Set new global variables in index.js equal to buttons, input field, and unordered list.
@@ -51,6 +55,7 @@ To complete this lab, I started by adding the index.html, index.js, and README f
     Tested again to make sure fixes worked.
     Add, Commit once any part worked.
 5. **Style, README update, & Complete**
+
     Added Bootstrap via link in html code to add basic styling.
     Updated README with template and filled it out.
     Done :D
@@ -85,6 +90,7 @@ To complete this lab, I started by adding the index.html, index.js, and README f
     I did also make a infitie loop at one point when testing the filter function. Luckily my VSCode had a limiter that stopped it before I even pressed Ctrl + C.
 
  3. **How would you modify this code to make it more efficient or user-friendly?**
+ 
     If I were to modify this code to make it more efficent or user friendly, I would definitely try
     to implement the filter() method. It looks like it could be cleaner and streamlined for the code,
     but my understanding of it led to too many errors and ALOT of extra code.
