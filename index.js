@@ -1,15 +1,15 @@
 //Lab 4.2 | Array Manipulation
 
 //Global Variables
-let shoppingList = [];
-let viewList = document.querySelector("#viewList")
+let shoppingList = [];  //Array Storage of string variables to add to list.
+let viewList = document.querySelector("#viewList") // List displayed in browser
 let addItemBtn = document.querySelector("#addItemBtn")
 let removeLastItemBtn = document.querySelector("#removeLastItemBtn")
 let itemInput = document.querySelector("#itemInput")
 //----------------------------------------------
 //Task 1 | Array Manipulation Basics
 
-//Add an item to the array using push | Commented due to update task in Task 2
+//Add an item to the array using push | Commented due to Task 2 requirements but it remains because it was part of Task 1.
 // function addItem(item){
 //     shoppingList.push(item)
 // }
@@ -43,11 +43,11 @@ function addItem(item) {
     //Filter first, then set the value of the result to variable foundMatch
     let foundMatch = filterItems(item)    
     if (foundMatch) {
-        console.log(`You already added ${item}`);
+        console.log(`You already added ${item}`); //Console Check
     }
 
     else{
-        console.log("Notification: Adding new item to list.");
+        console.log("Notification: Adding new item to list.");//Console Check
         shoppingList.push(item);
         displayList();
     } 
@@ -72,4 +72,10 @@ addItemBtn.addEventListener("click", function(){
     addItem(item) //Add the input field value to the array
     renderList()
     itemInput.value = ""
+})
+
+//Add an event listener to remove the last added itme.
+removeLastItemBtn.addEventListener("click", function(){
+    removeLastItem()
+    renderList()
 })
