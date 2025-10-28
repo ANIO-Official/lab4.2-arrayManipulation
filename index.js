@@ -1,9 +1,10 @@
 //Lab 4.2 | Array Manipulation
 
 //Global Variables
-
 let shoppingList = [];
-
+let displayList = document.querySelector("#displayList")
+let addItemBtn = document.querySelector("#addItemBtn")
+let removeLastItemBtn = document.querySelector("#removeLastItemBtn")
 //----------------------------------------------
 //Task 1 | Array Manipulation Basics
 
@@ -50,9 +51,7 @@ function addItem(item) {
         displayList();
     } 
 }
-//Test the function to make sure it ignores and adds.
-addItem("gloves")
-addItem("pink gloves")
-addItem("hat")
-addItem("hat")
-addItem("beer")
+
+//Task 3 | Render the List in the Broswer
+
+
