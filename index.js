@@ -2,8 +2,7 @@
 
 //Global Variables
 
-let shoppingList = []
-let query = "hat"
+let shoppingList = [];
 
 //----------------------------------------------
 //Task 1 | Array Manipulation Basics
@@ -12,48 +11,48 @@ let query = "hat"
 // function addItem(item){
 //     shoppingList.push(item)
 // }
-function removeLastItem(){
-    shoppingList.pop()
+function removeLastItem() {
+  shoppingList.pop();
 }
-function displayList(){
-    for (let listItem of shoppingList){
-        console.log(`current item: ${listItem}`) // to check if it was added. Testing purposes
-    }
+function displayList() {
+  for (let listItem of shoppingList) {
+    console.log(listItem); // to check if it was added. Testing purposes
+  }
 }
 
 //Task 2 | Filter and Search an Array
-function addItem(item){
-    shoppingList.push(item)
-}
-addItem("gloves")
-addItem("t-shirt")
-addItem("Gloves")
-addItem("pink gloves")
-displayList()
 
-//For Loop to check for matches
-
-function filterItems(query){
-    //Go through entire array and search for a match for global Variable query
-    function checkList(){
-        for (let i = 0; i < shoppingList.length; i++){
-            if(shoppingList[i] === query){
-                console.log(`You already added ${shoppingList[i]}`)
-                return true
-            }
-            else { 
-                console.log("This item does not match.")
-                return false}
+function filterItems(item) {
+    //Go through entire array and search for a match for item being added
+    for (let listItem of shoppingList){
+        if(listItem === item){
+            console.log(`Yup, ${listItem} is in here.`)
+            return true
+        }
+        else if (listItem !== item){
+            console.log(`Nope, ${listItem} isn't ${item}.`)
         }
     }
-    let result = shoppingList.filter((checkList))
+
 }
-filterItems(query)
 
-// function addItem(item){
-//     if(filterItems(shoppingList)){
+//check for a match then, add or ignore the new item.
+function addItem(item) {
+    //set the value of the result to variable foundMatch
+    let foundMatch = filterItems(item)    
+    if (foundMatch) {
+        console.log(`You already added ${item}`);
+    }
 
-//     }
-//     else{shoppingList.push(item)} 
-// }
-
+    else{
+        console.log("Notification: Adding new item to list.");
+        shoppingList.push(item);
+        displayList();
+    } 
+}
+//Test the function to make sure it ignores and adds.
+addItem("gloves")
+addItem("pink gloves")
+addItem("hat")
+addItem("hat")
+addItem("beer")
