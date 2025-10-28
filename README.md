@@ -1,10 +1,11 @@
 # 4.2 Lab Variables and Functions
 ## Lab Overview
 The purpose of this project is to practice creating variables and functions. This lab is focused on:
--Manipulating variables to perform mathmatical operations and string manipulation.
--Write and call functions that use parameters and return values.
--Use conditional logic inside functions to create more dynamic behavior.
--Refactor code to improve readability and reusability.
+
+- Manipulating variables to perform mathmatical operations and string manipulation.
+- Write and call functions that use parameters and return values.
+- Use conditional logic inside functions to create more dynamic behavior.
+- Refactor code to improve readability and reusability.
 ------------------------------------------------
 ## Table of contents
 
@@ -90,7 +91,7 @@ To complete this lab, I started by adding the index.html, index.js, and README f
     I did also make a infitie loop at one point when testing the filter function. Luckily my VSCode had a limiter that stopped it before I even pressed Ctrl + C.
 
  3. **How would you modify this code to make it more efficient or user-friendly?**
- 
+
     If I were to modify this code to make it more efficent or user friendly, I would definitely try
     to implement the filter() method. It looks like it could be cleaner and streamlined for the code,
     but my understanding of it led to too many errors and ALOT of extra code.
