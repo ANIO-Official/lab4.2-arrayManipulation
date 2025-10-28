@@ -92,6 +92,7 @@ To complete this lab, I started by adding the index.html, index.js, and README f
 ### Useful resources
 
 - [MDN Filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) - Though I couldn't use this method in my code efficiently, it did help with the logic of building my filter function.
+- [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction) I referenced for styling.
 
 ## Author
 
