@@ -2,9 +2,10 @@
 
 //Global Variables
 let shoppingList = [];
-let displayList = document.querySelector("#displayList")
+let viewList = document.querySelector("#viewList")
 let addItemBtn = document.querySelector("#addItemBtn")
 let removeLastItemBtn = document.querySelector("#removeLastItemBtn")
+let itemInput = document.querySelector("#itemInput")
 //----------------------------------------------
 //Task 1 | Array Manipulation Basics
 
@@ -39,7 +40,7 @@ function filterItems(item) {
 
 //check for a match then, add or ignore the new item.
 function addItem(item) {
-    //set the value of the result to variable foundMatch
+    //Filter first, then set the value of the result to variable foundMatch
     let foundMatch = filterItems(item)    
     if (foundMatch) {
         console.log(`You already added ${item}`);
@@ -54,4 +55,21 @@ function addItem(item) {
 
 //Task 3 | Render the List in the Broswer
 
-
+function renderList(){
+    //Clear the current displayList of anything in it.
+    viewList.innerHTML = ""
+    /*for each listItem in the shoppingList Array, make a new li element and set
+    the value of the innerText equal to the listItem from the array.*/
+    for(let listItem of shoppingList){
+        let newItem = document.createElement("li")
+        newItem.innerText = listItem 
+        viewList.appendChild(newItem)
+    }
+}
+//Add an event listener to update list by calling addItem Function and Renderlist.
+addItemBtn.addEventListener("click", function(){
+    let item = itemInput.value // Assign item variable the value of the item from input field
+    addItem(item) //Add the input field value to the array
+    renderList()
+    itemInput.value = ""
+})
