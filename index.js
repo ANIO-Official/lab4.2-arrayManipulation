@@ -6,6 +6,7 @@ let viewList = document.querySelector("#viewList") // List displayed in browser
 let addItemBtn = document.querySelector("#addItemBtn")
 let removeLastItemBtn = document.querySelector("#removeLastItemBtn")
 let itemInput = document.querySelector("#itemInput")
+let message = document.querySelector("#message")
 //----------------------------------------------
 //Task 1 | Array Manipulation Basics
 
@@ -44,9 +45,11 @@ function addItem(item) {
     let foundMatch = filterItems(item)    
     if (foundMatch) {
         console.log(`You already added ${item}`); //Console Check
+        message.innerText = `You already added ${item}`
     }
 
     else{
+        message.innerText = ''
         console.log("Notification: Adding new item to list.");//Console Check
         shoppingList.push(item);
         displayList();
@@ -63,6 +66,7 @@ function renderList(){
     for(let listItem of shoppingList){
         let newItem = document.createElement("li")
         newItem.innerText = listItem 
+        newItem.style.paddingTop = "10px"
         viewList.appendChild(newItem)
     }
 }
@@ -78,4 +82,5 @@ addItemBtn.addEventListener("click", function(){
 removeLastItemBtn.addEventListener("click", function(){
     removeLastItem()
     renderList()
+    message.innerText = ''
 })
